@@ -61,6 +61,10 @@ public:
             if (currentSampleRate > 0.0)
                 updateAngleDelta();
         };
+        addAndMakeVisible (levelSlider);
+        levelSlider.setRange (0.0, 0.25);
+        
+        
 
         setSize (600, 100);
         setAudioChannels (0, 2); // no inputs, two outputs
@@ -74,6 +78,7 @@ public:
     void resized() override
     {
         frequencySlider.setBounds (10, 10, getWidth() - 20, 20);
+        levelSlider.setBounds(10, 50, getWidth() - 20, 20);
     }
 
     void updateAngleDelta()
@@ -92,7 +97,7 @@ public:
 
     void getNextAudioBlock (const AudioSourceChannelInfo& bufferToFill) override
     {
-        auto level = 0.125f;
+        auto level = (float) levelSlider.getValue();
         auto* leftBuffer  = bufferToFill.buffer->getWritePointer (0, bufferToFill.startSample);
         auto* rightBuffer = bufferToFill.buffer->getWritePointer (1, bufferToFill.startSample);
 
@@ -106,7 +111,7 @@ public:
     }
 
 private:
-    Slider frequencySlider;
+    Slider frequencySlider, levelSlider;
     double currentSampleRate = 0.0, currentAngle = 0.0, angleDelta = 0.0; // [1]
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
