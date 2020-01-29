@@ -14,7 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DBB4FE03-AEA4-FF91-A9DC-31B52F257551}</ProjectGuid>
+    <ProjectGuid>{485C795B-59BB-7830-746A-C593B2916CA8}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"
@@ -45,11 +45,11 @@
     <TargetExt>.exe</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\App\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\App\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WavetableSynthTutorial</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SineSynthTutorial</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\App\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\App\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WavetableSynthTutorial</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SineSynthTutorial</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -80,17 +80,17 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\WavetableSynthTutorial.exe</OutputFile>
+      <OutputFile>$(OutDir)\SineSynthTutorial.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\WavetableSynthTutorial.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\SineSynthTutorial.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\WavetableSynthTutorial.bsc</OutputFile>
+      <OutputFile>$(IntDir)\SineSynthTutorial.bsc</OutputFile>
     </Bscmake>
     <Lib/>
   </ItemDefinitionGroup>
@@ -121,11 +121,11 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\WavetableSynthTutorial.exe</OutputFile>
+      <OutputFile>$(OutDir)\SineSynthTutorial.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\WavetableSynthTutorial.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\SineSynthTutorial.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -133,7 +133,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\WavetableSynthTutorial.bsc</OutputFile>
+      <OutputFile>$(IntDir)\SineSynthTutorial.bsc</OutputFile>
     </Bscmake>
     <Lib/>
   </ItemDefinitionGroup>
@@ -1853,7 +1853,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\WavetableSynthTutorial_01.h"/>
+    <ClInclude Include="..\..\Source\SineSynthTutorial_01.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
@@ -1894,7 +1894,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\utilities\juce_LagrangeInterpolator.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\utilities\juce_Reverb.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\utilities\juce_SmoothedValue.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\juce_audio_basics.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\juce_audio_basics.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\audio_io\juce_AudioDeviceManager.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\audio_io\juce_AudioIODevice.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\audio_io\juce_AudioIODeviceType.h"/>
@@ -1905,7 +1905,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\native\juce_MidiDataConcatenator.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\sources\juce_AudioSourcePlayer.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_devices\sources\juce_AudioTransportSource.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_devices\juce_audio_devices.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_audio_devices\juce_audio_devices.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\codecs\flac\libFLAC\include\private\all.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\codecs\flac\libFLAC\include\private\bitmath.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\codecs\flac\libFLAC\include\private\bitreader.h"/>
@@ -2003,7 +2003,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\format\juce_BufferingAudioFormatReader.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\format\juce_MemoryMappedAudioFormatReader.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_formats\sampler\juce_Sampler.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_formats\juce_audio_formats.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_audio_formats\juce_audio_formats.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\format\juce_AudioPluginFormat.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\format\juce_AudioPluginFormatManager.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\format_types\VST3_SDK\base\source\classfactoryhelpers.h"/>
@@ -2097,7 +2097,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\utilities\juce_AudioProcessorParameterWithID.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\utilities\juce_AudioProcessorValueTreeState.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_processors\utilities\juce_RangedAudioParameter.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_processors\juce_audio_processors.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_audio_processors\juce_audio_processors.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\audio_cd\juce_AudioCDBurner.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\audio_cd\juce_AudioCDReader.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\gui\juce_AudioAppComponent.h"/>
@@ -2110,7 +2110,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\gui\juce_MidiKeyboardComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\players\juce_AudioProcessorPlayer.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_utils\players\juce_SoundPlayer.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_utils\juce_audio_utils.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_audio_utils\juce_audio_utils.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_core\containers\juce_AbstractFifo.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_core\containers\juce_Array.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_core\containers\juce_ArrayAllocationBase.h"/>
@@ -2247,7 +2247,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_core\zip\juce_GZIPCompressorOutputStream.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_core\zip\juce_GZIPDecompressorInputStream.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_core\zip\juce_ZipFile.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_core\juce_core.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_core\juce_core.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\app_properties\juce_ApplicationProperties.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\app_properties\juce_PropertiesFile.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\undomanager\juce_UndoableAction.h"/>
@@ -2257,7 +2257,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\values\juce_ValueTree.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\values\juce_ValueTreeSynchroniser.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_data_structures\values\juce_ValueWithDefault.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_data_structures\juce_data_structures.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_data_structures\juce_data_structures.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_events\broadcasters\juce_ActionBroadcaster.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_events\broadcasters\juce_ActionListener.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_events\broadcasters\juce_AsyncUpdater.h"/>
@@ -2282,7 +2282,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_events\native\juce_win32_WinRTWrapper.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_events\timers\juce_MultiTimer.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_events\timers\juce_Timer.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_events\juce_events.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_events\juce_events.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_graphics\colour\juce_Colour.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_graphics\colour\juce_ColourGradient.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_graphics\colour\juce_Colours.h"/>
@@ -2341,7 +2341,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_graphics\native\juce_win32_Direct2DGraphicsContext.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_graphics\placement\juce_Justification.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_graphics\placement\juce_RectanglePlacement.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_graphics\juce_graphics.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_graphics\juce_graphics.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\application\juce_Application.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\buttons\juce_ArrowButton.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\buttons\juce_Button.h"/>
@@ -2481,7 +2481,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\windows\juce_ThreadWithProgressWindow.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\windows\juce_TooltipWindow.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_basics\windows\juce_TopLevelWindow.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_basics\juce_gui_basics.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_gui_basics\juce_gui_basics.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\code_editor\juce_CodeDocument.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\code_editor\juce_CodeEditorComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\code_editor\juce_CodeTokeniser.h"/>
@@ -2509,7 +2509,7 @@
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\misc\juce_SystemTrayIconComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\misc\juce_WebBrowserComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_gui_extra\native\juce_mac_CarbonViewWrapperComponent.h"/>
-    <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
